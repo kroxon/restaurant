@@ -32,13 +32,21 @@ const items = [
         price: "$9.99",
         src: saladImage
     },
+    
+    
 ];
 
 function loadMenu() {
     const content = document.getElementById("content");
     content.innerHTML = '';
-    content.classList.add('menu-section');
-    items.forEach(item => createMenuItem(content, item));
+    const dish = document.createElement('div'); 
+    dish.classList.add('menu-section');
+    items.forEach(item => createMenuItem(dish, item));
+
+    // double items
+    items.forEach(item => createMenuItem(dish, item));
+
+    content.appendChild(dish);
 }
 
 function createMenuItem(parent, item) {
