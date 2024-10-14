@@ -115,3 +115,9 @@ p.price {
   font-size: 18px;
   color: #28a745;
 }
+
+img.about {
+  width: 100%;
+  height: auto;
+  margin: 30px 0;
+}
